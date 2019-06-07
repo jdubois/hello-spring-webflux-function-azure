@@ -24,7 +24,7 @@ public class HelloFunction implements ApplicationContextInitializer<GenericAppli
 
     @Override
     public void initialize(GenericApplicationContext context) {
-        context.registerBean("demo", FunctionRegistration.class,
+        context.registerBean("hello", FunctionRegistration.class,
                 () -> new FunctionRegistration<>(hello())
                         .type(FunctionType.from(User.class).to(Greeting.class)));
     }
